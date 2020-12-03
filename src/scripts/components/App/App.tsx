@@ -1,19 +1,31 @@
 import React from 'react';
-import logo from 'images/logo.svg';
-import './App.scss';
+import '../../../styles/index.scss';
+import ForceGraph3D from 'react-force-graph-3d';
 
 const App = (): React.ReactElement => {
+  const data = {
+    nodes: [
+      {
+        id: 'id1',
+        name: 'name1',
+        val: 1,
+      },
+      {
+        id: 'id2',
+        name: 'name2',
+        val: 10,
+      },
+    ],
+    links: [
+      {
+        source: 'id1',
+        target: 'id2',
+      },
+    ],
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+      <ForceGraph3D graphData={data} />
     </div>
   );
 };
