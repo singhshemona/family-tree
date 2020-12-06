@@ -19,23 +19,7 @@ export const App = (): React.ReactElement => {
         }}
         backgroundColor="#f6f5f5"
         linkColor={() => '#rgba(7, 13, 89, 1)'}
-        nodeColor={() => '#rgba(31, 60, 136, 1)'}
-        // nodeThreeObject={(data) => {
-        //   const sprite = new SpriteText('test');
-        //   sprite.color = 'red';
-        //   return sprite;
-        // }}
-        // nodeThreeObject={new SpriteText('text', 8, 'blue')}
-        // nodeThreeObject={(node) => {
-        //   let i = 0;
-        //   let sprite: SpriteText = new SpriteText();
-        //   while (i < data.nodes.length) {
-        //     sprite = new SpriteText(data.nodes[i].name);
-        //     sprite.color = 'red';
-        //     i++;
-        //   }
-        //   return sprite;
-        // }}
+        // nodeColor={() => '#rgba(31, 60, 136, 1)'}
         nodeThreeObject={(node) => {
           const sprite = new SpriteText(`${node.id}`);
           sprite.color = '#1f3c88';
